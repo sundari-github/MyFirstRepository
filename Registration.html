@@ -1,0 +1,48 @@
+<html>
+	<script type="application/javascript">
+		function checkNames()
+		{
+			var firstName = document.getElementById ("firstName");
+			var lastName = document.getElementById ("lastName");
+			if (firstName.value == "")
+			{
+				alert ("First Name cannot be blank");
+				firstName.focus ();
+				return false;
+			}
+			if (lastName.value == "")
+			{
+				alert ("Last Name cannot be blank");
+				lastName.focus ();
+				return false;
+			}
+			var a = new String(“Hello”); 
+			var b = “Hello”; 
+			if (a == b){ 
+				alert(“Same”); 
+			} else{ 
+				alert(“Different”);
+			} 
+} 
+			return true;
+		}
+	</script>
+	<head>
+		<title>Registration Form</title>
+	</head>
+	<body>
+		<form id="nameForm" onsubmit="return checkNames()">
+			<fieldset>
+				<legend><b>Personal Details</b></legend>
+				<label for="firstName">First Name</label>
+				<input type="text" id="firstName">
+				<br><br>
+				<label for="lastName">Last Name</label>
+				<input type="text" id="lastName">
+				<br><br>
+				<input type="submit" value="Submit">
+				<input type="reset" value="Reset">
+			</fieldset>
+		</form>
+	</body>
+</html>
